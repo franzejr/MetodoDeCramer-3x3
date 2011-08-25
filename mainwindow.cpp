@@ -70,21 +70,21 @@ void MainWindow::preencherMatrizes(){
     //Calcular o determinante Geral
     determinanteGeral = determinante3Por3(coeficietes);
     if(determinanteGeral != 0){
-    double valorx, valory,valorz;
-    valorx = calcularX(coeficietes,termosInd);
-    valory = calcularY(coeficietes,termosInd);
-    valorz = calcularZ(coeficietes,termosInd);
-    QString valores;
-    valores =" ";
-    valores.append("X = ");
-    valores.append(QString::number(valorx));
-    valores.append("\nY = ");
-    valores.append(QString::number(valory));
-    valores.append("\nZ=");
-    valores.append(QString::number(valorz));
-    valores.append("\n\n");
+        double valorx, valory,valorz;
+        valorx = calcularX(coeficietes,termosInd);
+        valory = calcularY(coeficietes,termosInd);
+        valorz = calcularZ(coeficietes,termosInd);
+        QString valores;
+        valores =" ";
+        valores.append("X = ");
+        valores.append(QString::number(valorx));
+        valores.append("\nY = ");
+        valores.append(QString::number(valory));
+        valores.append("\nZ=");
+        valores.append(QString::number(valorz));
+        valores.append("\n\n");
 
-    ui->quadro->append(valores);
+        ui->quadro->append(valores);
 
     }
     else{
