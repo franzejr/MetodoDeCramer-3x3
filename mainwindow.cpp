@@ -69,7 +69,7 @@ void MainWindow::preencherMatrizes(){
 
     //Calcular o determinante Geral
     determinanteGeral = determinante3Por3(coeficietes);
-
+    if(determinanteGeral != 0){
     double valorx, valory,valorz;
     valorx = calcularX(coeficietes,termosInd);
     valory = calcularY(coeficietes,termosInd);
@@ -85,7 +85,13 @@ void MainWindow::preencherMatrizes(){
     valores.append("\n\n");
 
     ui->quadro->append(valores);
-    //ui->quadro->clear();
+
+    }
+    else{
+        QString msg = "O determinante deu zero!";
+        ui->quadro->append(msg);
+    }
+
 }
 
 
